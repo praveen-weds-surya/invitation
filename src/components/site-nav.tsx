@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-// Import your new logo
+// Import your logo
 import logoImage from "@/assets/logos/ps_spice.png";
 
 const links = [
@@ -19,7 +19,6 @@ export function SiteNav() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-cream/90 backdrop-blur">
       <div className="container-w flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-serif text-lg text-primary">
-          {/* Updated Logo Section */}
           <img 
             src={logoImage} 
             alt="Praveen & Surya Logo" 
@@ -28,21 +27,26 @@ export function SiteNav() {
           <span className="hidden sm:inline text-sm uppercase tracking-[0.28em]">Praveen &amp; Surya</span>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="text-xs uppercase tracking-[0.24em] text-primary/80 transition-colors hover:text-accent"
-              activeProps={{ className: "text-accent" }}
+              className={`text-xs uppercase tracking-[0.24em] transition-colors hover:text-accent ${
+                l.to === "/rsvp" 
+                  ? "btn-primary !py-2 !px-5 text-[0.7rem]" 
+                  : "text-primary/80"
+              }`}
+              activeProps={{ className: l.to === "/rsvp" ? "" : "text-accent" }}
               activeOptions={{ exact: l.to === "/" }}
             >
               {l.label}
             </Link>
           ))}
-          <Link to="/rsvp" className="btn-primary !py-2 !px-5 text-[0.7rem]">RSVP</Link>
         </nav>
 
+        {/* Mobile Toggle Button */}
         <button
           className="md:hidden text-primary"
           onClick={() => setOpen(!open)}
@@ -52,6 +56,7 @@ export function SiteNav() {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-border/60 bg-cream">
           <div className="container-w flex flex-col py-4 gap-3">

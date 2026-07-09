@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Countdown } from "@/components/countdown";
 import SangeethInvite from "@/components/SangeethInvite";
 import WeddingInvite from "@/components/WeddingInvite";
+import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/itinerary")({
   head: () => ({
@@ -33,12 +34,10 @@ function Itinerary() {
         <h1 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">
           The Itinerary
         </h1>
-
-        <div className="divider-motif mt-6" />
       </section>
 
       {/* Invitation Section */}
-      <section className="bg-[#092F33] py-20">
+      <section className="bg-beige py-20">
         <div className="container-w">
 
           {/* Sangeeth Invitation */}
@@ -56,6 +55,9 @@ function Itinerary() {
           <Countdown />
         </div>
       </section>
+
+      {/* Site Footer - Local to Itinerary Page Only */}
+      <SiteFooter />
     </>
   );
 }

@@ -51,7 +51,8 @@ function Story() {
               the next chapter with all of you.
             </p>
             <p className="text-xl pt-4 italic">
-              Love, P &amp; S
+              Love, <br />
+              P &amp; S
             </p>
           </div>
           
