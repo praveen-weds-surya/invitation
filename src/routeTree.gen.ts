@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as StoryRouteImport } from './routes/story'
 import { Route as RsvpRouteImport } from './routes/rsvp'
 import { Route as ItineraryRouteImport } from './routes/itinerary'
+import { Route as GlamUpRouteImport } from './routes/glam-up'
 import { Route as DetailsRouteImport } from './routes/details'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const ItineraryRoute = ItineraryRouteImport.update({
   path: '/itinerary',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlamUpRoute = GlamUpRouteImport.update({
+  id: '/glam-up',
+  path: '/glam-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DetailsRoute = DetailsRouteImport.update({
   id: '/details',
   path: '/details',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/details': typeof DetailsRoute
+  '/glam-up': typeof GlamUpRoute
   '/itinerary': typeof ItineraryRoute
   '/rsvp': typeof RsvpRoute
   '/story': typeof StoryRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/details': typeof DetailsRoute
+  '/glam-up': typeof GlamUpRoute
   '/itinerary': typeof ItineraryRoute
   '/rsvp': typeof RsvpRoute
   '/story': typeof StoryRoute
@@ -59,21 +67,30 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/details': typeof DetailsRoute
+  '/glam-up': typeof GlamUpRoute
   '/itinerary': typeof ItineraryRoute
   '/rsvp': typeof RsvpRoute
   '/story': typeof StoryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/details' | '/itinerary' | '/rsvp' | '/story'
+  fullPaths: '/' | '/details' | '/glam-up' | '/itinerary' | '/rsvp' | '/story'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/details' | '/itinerary' | '/rsvp' | '/story'
-  id: '__root__' | '/' | '/details' | '/itinerary' | '/rsvp' | '/story'
+  to: '/' | '/details' | '/glam-up' | '/itinerary' | '/rsvp' | '/story'
+  id:
+    | '__root__'
+    | '/'
+    | '/details'
+    | '/glam-up'
+    | '/itinerary'
+    | '/rsvp'
+    | '/story'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DetailsRoute: typeof DetailsRoute
+  GlamUpRoute: typeof GlamUpRoute
   ItineraryRoute: typeof ItineraryRoute
   RsvpRoute: typeof RsvpRoute
   StoryRoute: typeof StoryRoute
@@ -102,6 +119,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ItineraryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/glam-up': {
+      id: '/glam-up'
+      path: '/glam-up'
+      fullPath: '/glam-up'
+      preLoaderRoute: typeof GlamUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/details': {
       id: '/details'
       path: '/details'
@@ -122,6 +146,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DetailsRoute: DetailsRoute,
+  GlamUpRoute: GlamUpRoute,
   ItineraryRoute: ItineraryRoute,
   RsvpRoute: RsvpRoute,
   StoryRoute: StoryRoute,

@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "@tanstack/react-router";import React from "react";
 import lightsImg from "@/assets/logos/serial_lights.png";
 import flowersImg from "@/assets/logos/flowers.png";
 import partyballImg from "@/assets/logos/partyball.png";
@@ -30,17 +30,18 @@ export default function CombinedInvite({
       <div className="relative w-full">
 
         {/* ================= TOP (Graphics & Title) ================= */}
+        {/* FIX: Removed z-10 from this wrapper so it doesn't force its contents to float above the card */}
         <div 
-          className="relative w-full z-10 pointer-events-none mx-auto" 
+          className="relative w-full pointer-events-none mx-auto" 
           style={{ aspectRatio: "1440 / 450" }}
         >
-          {/* Added mix-blend-screen so the lights actually "glow" against the dark background */}
+          {/* FIX: Changed z-50 to z-0 so it naturally falls behind the beige card layer */}
           <img 
             src={lightsImg} 
             alt="Decorative Lights" 
-            className="absolute top-[-50%] left-[85%] -translate-x-1/2 w-[80%] max-w-none h-auto object-cover opacity-90 z-50 mix-blend-screen" 
+            className="absolute top-[-50%] left-[85%] -translate-x-1/2 w-[80%] max-w-none h-auto object-cover opacity-90 z-0 mix-blend-screen" 
           />
-          {/* Added a subtle drop shadow to make the title pop out of the background */}
+          {/* Title keeps z-10 so it stays above the lights and card edges if they touch */}
           <img 
             src={titleImg} 
             alt="Sangeeth Night" 
@@ -49,9 +50,9 @@ export default function CombinedInvite({
         </div>
 
         {/* ================= SANGEETH CARD & OVERLAPPING GRAPHICS ================= */}
-        <div className="relative w-[92%] max-w-4xl mx-auto z-20 -mt-[8%] pointer-events-none">
+        {/* FIX: Removed z-20 from this wrapper to break the stacking context ceiling */}
+        <div className="relative w-[92%] max-w-4xl mx-auto -mt-[8%] pointer-events-none">
 
-          {/* Added heavy drop-shadow to give it 3D depth over the card */}
           <img 
             src={partyballImg} 
             alt="Hand holding disco ball" 
@@ -64,24 +65,22 @@ export default function CombinedInvite({
         </div>
 
         {/* ================= BOTTOM SANGEETH (Graphics) ================= */}
+        {/* FIX: Removed z-30 from this wrapper to break the stacking context ceiling */}
         <div 
-          className="relative w-full z-30 pointer-events-none mx-auto -mt-[5%]" 
+          className="relative w-full pointer-events-none mx-auto -mt-[5%]" 
           style={{ aspectRatio: "1440 / 350" }}
         >
-          {/* Added drop-shadow-2xl for depth */}
           <img 
             src={flowersImg} 
             alt="Floral Decor" 
             className="absolute top-[-120%] left-[-20%] md:left-[-6%] -translate-y-1/2 w-[50%] md:w-[25%] h-auto object-contain opacity-90 z-50 drop-shadow-2xl" 
           />
 
-          {/* Added subtle drop-shadow to ground the carpet */}
           <img 
             src={carpetImg} 
             alt="Carpet with Gramophone and Snacks" 
             className="absolute top-[50%] left-[18%] -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto object-contain opacity-95 z-60 drop-shadow-xl" 
           />
-          {/* Added heavy drop-shadow to make the elephant pop */}
           <img 
             src={elephantImg} 
             alt="Elephant Decor" 
@@ -99,8 +98,9 @@ export default function CombinedInvite({
         <WeddingCard bride={bride} groom={groom} />
 
         {/* ================= BOTTOM WEDDING (3 NEW LOGOS) ================= */}
+        {/* FIX: Removed z-30 from this wrapper to break the stacking context ceiling */}
         <div 
-          className="absolute bottom-0 left-0 w-full z-30 pointer-events-none mx-auto" 
+          className="absolute bottom-0 left-0 w-full pointer-events-none mx-auto" 
           style={{ aspectRatio: "1440 / 200" }}
         >
           <img 
@@ -158,20 +158,17 @@ type InviteCardProps = {
 // ---------------- SANGEETH CARD COMPONENT ----------------
 function InviteCard({ bride, groom }: InviteCardProps) {
   return (
-    // Changed py-12 to py-8 for mobile, kept md:py-20 for desktop
     <div className="relative w-full overflow-hidden rounded-[40px] bg-[#E4CBA9] shadow-2xl border border-white/20 flex flex-col items-center justify-center py-8 md:py-20 px-6 md:px-12">
       
-      {/* Changed mb-10 to mb-6 md:mb-10 */}
-      <p className="text-center text-[10px] md:text-xs tracking-[0.3em] uppercase mb-6 md:mb-10 text-[#AF5031] font-bold">
+      {/* FIX: Added relative z-[100] to text blocks to pop over images */}
+      <p className="relative z-[100] text-center text-[10px] md:text-xs tracking-[0.3em] uppercase mb-6 md:mb-10 text-[#AF5031] font-bold">
         Together with our families
       </p>
       
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="mb-8 md:mb-12 text-center">
+      <div className="relative z-[100] mb-8 md:mb-12 text-center">
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
           {groom}
         </h2>
-        {/* Shrunk the ampersand margin for mobile: my-2 md:my-4 */}
         <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "Meantime, cursive" }}>
           &amp;
         </p>
@@ -180,29 +177,25 @@ function InviteCard({ bride, groom }: InviteCardProps) {
         </h2>
       </div>
 
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="mb-8 md:mb-12 text-center flex flex-col">
+      <div className="relative z-[100] mb-8 md:mb-12 text-center flex flex-col">
         <p className="mb-1 md:mb-2 text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#092F33] font-medium">Invite you to celebrate</p>
         <p className="mb-1 md:mb-2 text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#092F33] font-medium">an evening of</p>
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#092F33] font-medium">music · dance · laughter</p>
       </div>
       
-      {/* Changed mb-14 to mb-8 md:mb-14 */}
-      <div className="mb-8 md:mb-14 text-center">
+      <div className="relative z-[100] mb-8 md:mb-14 text-center">
         <p className="text-sm md:text-base tracking-[0.3em] uppercase font-bold text-[#AF5031]">Wednesday</p>
-        {/* Shrunk the date margin for mobile: my-2 md:my-4 */}
         <h1 className="text-7xl md:text-9xl text-[#092F33] my-2 md:my-4 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>17</h1>
         <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#AF5031]">February 2027 . At 6.30 PM</p>
       </div>
 
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="text-center mb-8 md:mb-12 flex flex-col">
+      <div className="relative z-[100] text-center mb-8 md:mb-12 flex flex-col">
         <p className="mb-1 md:mb-2 text-sm md:text-base tracking-[0.15em] font-bold text-[#092F33] uppercase">CLUB 6 CONVENTION CENTRE</p>
         <p className="mb-1 md:mb-2 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">KALLEPULLY ROAD RAMANATHAPURAM</p>
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">PALAKKAD, KERALA 678001</p>
       </div>
 
-      <a href="#" className="mt-4 inline-block rounded-full bg-[#AF5031] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-lg shadow-[#AF5031]/30 relative z-50">
+      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#AF5031] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-lg shadow-[#AF5031]/30">
         Let's Glam Up
       </a>
     </div>
@@ -210,22 +203,21 @@ function InviteCard({ bride, groom }: InviteCardProps) {
 }
 
 // ---------------- WEDDING CARD COMPONENT ----------------
+// ---------------- WEDDING CARD COMPONENT ----------------
 function WeddingCard({ bride, groom }: InviteCardProps) {
+  // FIX: Removed z-20 from this component's root to break the stacking context ceiling
   return (
-    // Changed py-12 to py-8 for mobile, kept md:py-20 for desktop
-    <div className="relative mx-auto w-[92%] max-w-4xl overflow-hidden rounded-[40px] bg-[#F5F1E6] shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/30 flex flex-col items-center justify-center py-8 md:py-20 px-6 md:px-12 z-20 pointer-events-auto">
+    <div className="relative mx-auto w-[92%] max-w-4xl overflow-hidden rounded-[40px] bg-[#F5F1E6] shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/30 flex flex-col items-center justify-center py-8 md:py-20 px-6 md:px-12 pointer-events-auto">
       
-      {/* Changed mb-10 to mb-6 md:mb-10 */}
-      <p className="text-center text-[10px] md:text-xs tracking-[0.3em] uppercase mb-6 md:mb-10 text-[#8B4513] font-bold">
+      {/* FIX: Added relative z-[100] to text blocks to pop over images */}
+      <p className="relative z-[100] text-center text-[10px] md:text-xs tracking-[0.3em] uppercase mb-6 md:mb-10 text-[#8B4513] font-bold">
         Together with our families
       </p>
       
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="mb-8 md:mb-12 text-center">
+      <div className="relative z-[100] mb-8 md:mb-12 text-center">
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
           {groom}
         </h2>
-        {/* Shrunk the ampersand margin for mobile: my-2 md:my-4 */}
         <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "Meantime, cursive" }}>
           &amp;
         </p>
@@ -234,28 +226,24 @@ function WeddingCard({ bride, groom }: InviteCardProps) {
         </h2>
       </div>
 
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="mb-8 md:mb-12 text-center flex flex-col">
+      <div className="relative z-[100] mb-8 md:mb-12 text-center flex flex-col">
         <p className="mb-1 md:mb-2 text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#092F33] font-medium">Invite you to</p>
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#092F33] font-medium">Celebrate our marriage on</p>
       </div>
       
-      {/* Changed mb-14 to mb-8 md:mb-14 */}
-      <div className="mb-8 md:mb-14 text-center">
+      <div className="relative z-[100] mb-8 md:mb-14 text-center">
         <p className="text-sm md:text-base tracking-[0.3em] uppercase font-bold text-[#8B4513]">Thursday</p>
-        {/* Shrunk the date margin for mobile: my-2 md:my-4 */}
         <h1 className="text-7xl md:text-9xl text-[#092F33] my-2 md:my-4 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>18</h1>
         <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#8B4513]">February 2027 · At 10.00 AM</p>
       </div>
 
-      {/* Changed mb-12 to mb-8 md:mb-12 */}
-      <div className="text-center mb-8 md:mb-12 flex flex-col">
+      <div className="relative z-[100] text-center mb-8 md:mb-12 flex flex-col">
         <p className="mb-1 md:mb-2 text-sm md:text-base tracking-[0.15em] font-bold text-[#092F33] uppercase">CLUB 6 CONVENTION CENTRE</p>
         <p className="mb-1 md:mb-2 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">KALLEPULLY ROAD RAMANATHAPURAM</p>
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">PALAKKAD, KERALA 678001</p>
       </div>
 
-      <a href="#" className="mt-4 inline-block rounded-full bg-[#8B4513] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#980204] hover:scale-105 active:scale-95 shadow-lg shadow-[#8B4513]/40 relative z-50">
+      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#8B4513] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#980204] hover:scale-105 active:scale-95 shadow-lg shadow-[#8B4513]/40">
         Let's Glam Up
       </a>
     </div>
