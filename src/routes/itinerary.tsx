@@ -26,7 +26,7 @@ function Itinerary() {
       {/* Added id="itinerary" right here to the main header section! */}
       <section id="itinerary" className="bg-beige py-16 text-center">
         {/* Changed text style to track your custom layout font rules */}
-        <p className="text-xs uppercase tracking-[0.4em] text-accent font-sans">
+        <p className="text-xs uppercase tracking-[0.4em] text-accent">
           Two Days of Celebration
         </p>
 

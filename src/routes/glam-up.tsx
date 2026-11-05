@@ -25,10 +25,7 @@ function GlamUpPage() {
         <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#E4CBA9] font-semibold mb-3">
           Wedding Guest
         </p>
-        <h1
-          className="relative z-[100] text-4xl sm:text-5xl md:text-7xl text-[#F5F1E6] text-center drop-shadow-lg"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-        >
+        <h1 className="relative z-[100] text-4xl sm:text-5xl md:text-7xl text-[#F5F1E6] text-center drop-shadow-lg font-serif">
           Color Palette Guide
         </h1>
         <p className="relative z-[100] text-center text-xs md:text-sm tracking-[0.2em] uppercase mt-4 text-[#E4CBA9]/85 font-medium max-w-md">
@@ -41,22 +38,16 @@ function GlamUpPage() {
       {/* ============================================================== */}
       <div className="relative w-full px-4 md:px-12 py-6 md:py-8 z-30">
         <div className="relative z-40 mx-auto w-full max-w-4xl overflow-hidden rounded-[30px] bg-[#E4CBA9] bg-opacity-95 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/30 p-6 sm:p-10 md:p-12">
-          <div className="relative z-[100] text-center mb-8">
+          <div className="relative z-[100] text-center mb-6">
             <span className="inline-block text-[11px] md:text-xs tracking-[0.3em] uppercase text-[#AF5031] font-bold pb-2">
               Event 1 · Wednesday, 17 February
             </span>
-            <h2
-              className="text-3xl md:text-5xl text-[#092F33] mb-2"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h2 className="text-3xl md:text-5xl text-[#092F33] mb-2 font-serif">
               Sangeeth (Evening Glam)
             </h2>
-            <p className="mt-4 text-sm md:text-base text-[#092F33]/85 leading-relaxed font-medium max-w-2xl mx-auto">
-              These rich and metallic jewel tones complement the Navy &amp; Crimson couple without competing.
-            </p>
           </div>
 
-          <div className="relative z-[100] flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-8">
+          <div className="relative z-[100] flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6">
             <Swatch color="#F1E5C1" name="Metallic Champagne" />
             <Swatch color="#C0C0C0" name="Silver Grey" />
             <Swatch color="#006400" name="Emerald Green" />
@@ -71,22 +62,16 @@ function GlamUpPage() {
       {/* ============================================================== */}
       <div className="relative w-full px-4 md:px-12 py-6 md:py-8 z-20">
         <div className="relative z-40 mx-auto w-full max-w-4xl overflow-hidden rounded-[30px] bg-[#F5F1E6] bg-opacity-95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-white/40 p-6 sm:p-10 md:p-12">
-          <div className="relative z-[100] text-center mb-8">
+          <div className="relative z-[100] text-center mb-6">
             <span className="inline-block text-[11px] md:text-xs tracking-[0.3em] uppercase text-[#8B4513] font-bold pb-2">
               Event 2 · Thursday, 18 February
             </span>
-            <h2
-              className="text-3xl md:text-5xl text-[#980204] mb-2"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h2 className="text-3xl md:text-5xl text-[#980204] mb-2 font-serif">
               Wedding Ceremony (Daytime Traditional)
             </h2>
-            <p className="mt-4 text-sm md:text-base text-[#092F33]/85 leading-relaxed font-medium max-w-2xl mx-auto">
-              Warm and soft earthy and pastel tones that stand out in daylight while allowing the red and ivory to shine.
-            </p>
           </div>
 
-          <div className="relative z-[100] flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-8">
+          <div className="relative z-[100] flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6">
             <Swatch color="#FFDB58" name="Mustard Yellow" />
             <Swatch color="#9DC183" name="Sage Green" />
             <Swatch color="#B7410E" name="Rust" />

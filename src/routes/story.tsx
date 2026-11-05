@@ -21,13 +21,13 @@ function Story() {
   return (
     <>
       {/* Header Section */}
-      <section className="bg-[#E4CBA9] py-14 text-center font-cotoris">
+      <section className="bg-[#E4CBA9] py-14 text-center">
         <p className="text-xs uppercase tracking-[0.4em] text-[#AF5031]">Praveen &amp; Surya</p>
         <h1 className="mt-4 text-4xl sm:text-5xl text-[#092F33] font-serif">No Backstory, Just Vibes</h1>
       </section>
 
       {/* Narrative Section - Terracotta Background */}
-      <section className="bg-[#AF5031] text-[#E4CBA9] py-16 sm:py-24 font-cotoris relative overflow-hidden">
+      <section className="bg-[#AF5031] text-[#E4CBA9] py-16 sm:py-24 relative overflow-hidden">
         
         {/* Decorative Rangoli Corners */}
         <div className="absolute -bottom-[0px] -left-[120px] w-64 opacity-40 pointer-events-none">
@@ -75,7 +75,7 @@ function Story() {
       </section>
 
       {/* You are Invited */}
-      <section className="bg-[#AF5031] py-16 text-center font-cotoris flex justify-center pb-24">
+      <section className="bg-[#AF5031] py-16 text-center flex justify-center pb-24">
         <Link 
           to="/itinerary" 
           className="group relative block transition-transform hover:scale-105 active:scale-95"
@@ -85,7 +85,7 @@ function Story() {
             alt="You are invited" 
             className="h-24 w-auto object-contain"
           />
-          <span className="absolute inset-0 flex items-center justify-center text-[#E4CBA9] font-cotoris text-2xl pointer-events-none">
+          <span className="absolute inset-0 flex items-center justify-center text-[#E4CBA9] font-serif text-2xl pointer-events-none">
             You are invited!
           </span>
         </Link>

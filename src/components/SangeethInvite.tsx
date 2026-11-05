@@ -169,7 +169,7 @@ function InviteCard({ bride, groom }: InviteCardProps) {
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
           {groom}
         </h2>
-        <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "Meantime, cursive" }}>
+        <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "var(--font-script), 'Great Vibes', cursive" }}>
           &amp;
         </p>
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -218,7 +218,7 @@ function WeddingCard({ bride, groom }: InviteCardProps) {
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
           {groom}
         </h2>
-        <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "Meantime, cursive" }}>
+        <p className="text-3xl md:text-4xl text-[#AF5031] my-2 md:my-4 drop-shadow-sm" style={{ fontFamily: "var(--font-script), 'Great Vibes', cursive" }}>
           &amp;
         </p>
         <h2 className="text-4xl md:text-6xl text-[#092F33]" style={{ fontFamily: "'Playfair Display', serif" }}>
