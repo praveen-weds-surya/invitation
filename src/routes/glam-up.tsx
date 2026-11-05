@@ -43,7 +43,7 @@ function GlamUpPage() {
               Event 1 · Wednesday, 17 February
             </span>
             <h2 className="text-3xl md:text-5xl text-[#092F33] mb-2 font-serif">
-              Sangeeth (Evening Glam)
+              Sangeeth
             </h2>
           </div>
 
@@ -67,7 +67,7 @@ function GlamUpPage() {
               Event 2 · Thursday, 18 February
             </span>
             <h2 className="text-3xl md:text-5xl text-[#980204] mb-2 font-serif">
-              Wedding Ceremony (Daytime Traditional)
+              Wedding Ceremony
             </h2>
           </div>
 
