@@ -7,10 +7,10 @@ import inviteButton from "@/assets/logos/youre_invited.png";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "Our Story · Praveen & Surya" },
+      { title: "No Backstory, Just Vibes · Praveen & Surya" },
       {
         name: "description",
-        content: "The story of Angu Praveen and Surya K — written in laughter, patience, and countless little moments.",
+        content: "Two people, two families, a whole lot of planning and one very big celebration. Praveen & Surya.",
       },
     ],
   }),
@@ -23,7 +23,7 @@ function Story() {
       {/* Header Section */}
       <section className="bg-[#E4CBA9] py-14 text-center font-cotoris">
         <p className="text-xs uppercase tracking-[0.4em] text-[#AF5031]">Praveen &amp; Surya</p>
-        <h1 className="mt-4 text-4xl sm:text-5xl text-[#092F33]">Our Story</h1>
+        <h1 className="mt-4 text-4xl sm:text-5xl text-[#092F33] font-serif">No Backstory, Just Vibes</h1>
       </section>
 
       {/* Narrative Section - Terracotta Background */}
@@ -40,19 +40,25 @@ function Story() {
 
         <div className="container mx-auto px-6 grid gap-12 md:grid-cols-2 items-center max-w-5xl relative z-10">
           <div className="space-y-6 leading-relaxed">
-            <p className="text-lg italic text-[#E4CBA9]/90">Dear Family &amp; Friends,</p>
+            <h2 className="text-2xl sm:text-3xl font-serif italic text-[#E4CBA9]">Well, here we are!</h2>
             <p className="text-lg">
-              Every story has its own rhythm. Ours was written in laughter,
-              patience, late-night conversations, and countless little moments
-              that slowly became everything.
+              Two people, two families, a whole lot of planning and one very big celebration.
             </p>
             <p className="text-lg">
-              Thank you for being part of our journey. We can't wait to celebrate
-              the next chapter with all of you.
+              We're skipping the long love story and getting straight to the part we're most excited about, having all our favourite people together in one place.
+            </p>
+            <p className="text-lg">
+              There'll be celebrations, good food, happy chaos and, hopefully, a few stories we'll be talking about for years to come.
+            </p>
+            <p className="text-lg">
+              We can't think of a better way to begin this next chapter than with all of you around.
+            </p>
+            <p className="text-lg font-medium">
+              Here's to a lovely celebration. We can't wait to see you!
             </p>
             <p className="text-xl pt-4 italic">
-              Love, <br />
-              P &amp; S
+              With love, <br />
+              Praveen &amp; Surya
             </p>
           </div>
           
@@ -68,9 +74,8 @@ function Story() {
         </div>
       </section>
 
-      {/* You are Invited - Now matching the Terracotta background */}
+      {/* You are Invited */}
       <section className="bg-[#AF5031] py-16 text-center font-cotoris flex justify-center pb-24">
-        {/* CHANGED: Route target updated from "/invitation" to "/itinerary" */}
         <Link 
           to="/itinerary" 
           className="group relative block transition-transform hover:scale-105 active:scale-95"

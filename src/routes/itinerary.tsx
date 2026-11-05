@@ -1,7 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Countdown } from "@/components/countdown";
 import SangeethInvite from "@/components/SangeethInvite";
-import WeddingInvite from "@/components/WeddingInvite";
 import { SiteFooter } from "@/components/site-footer";
 
 export const Route = createFileRoute("/itinerary")({
@@ -51,9 +50,21 @@ function Itinerary() {
       </section>
 
       {/* Countdown */}
-      <section className="bg-beige py-20">
+      <section className="bg-beige pt-20 pb-10">
         <div className="container-w">
           <Countdown />
+        </div>
+      </section>
+
+      {/* RSVP Section */}
+      <section className="bg-beige pb-24 flex justify-center">
+        <div className="container-w flex justify-center">
+          <Link 
+            to="/rsvp" 
+            className="inline-block rounded-full bg-accent px-12 py-5 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl border border-white/20"
+          >
+            RSVP
+          </Link>
         </div>
       </section>
 

@@ -22,7 +22,7 @@ export default function CombinedInvite({
   groom = "Angu Praveen",
 }: Props) {
   return (
-    <section className="relative mx-auto -my-20 md:my-6 max-w-7xl overflow-hidden rounded-[40px] bg-[#092F33] shadow-2xl flex flex-col">
+    <section className="relative z-10 mx-auto -my-20 md:my-6 max-w-7xl overflow-hidden rounded-[40px] bg-[#092F33] shadow-2xl flex flex-col">
 
       {/* ============================================================== */}
       {/* 1. SANGEETH SECTION                                            */}
@@ -186,7 +186,7 @@ function InviteCard({ bride, groom }: InviteCardProps) {
       <div className="relative z-[100] mb-8 md:mb-14 text-center">
         <p className="text-sm md:text-base tracking-[0.3em] uppercase font-bold text-[#AF5031]">Wednesday</p>
         <h1 className="text-7xl md:text-9xl text-[#092F33] my-2 md:my-4 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>17</h1>
-        <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#AF5031]">February 2027 . At 6.30 PM</p>
+        <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#AF5031]">February 2027 · 6 PM Onwards</p>
       </div>
 
       <div className="relative z-[100] text-center mb-8 md:mb-12 flex flex-col">
@@ -234,7 +234,7 @@ function WeddingCard({ bride, groom }: InviteCardProps) {
       <div className="relative z-[100] mb-8 md:mb-14 text-center">
         <p className="text-sm md:text-base tracking-[0.3em] uppercase font-bold text-[#8B4513]">Thursday</p>
         <h1 className="text-7xl md:text-9xl text-[#092F33] my-2 md:my-4 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>18</h1>
-        <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#8B4513]">February 2027 · At 10.00 AM</p>
+        <p className="text-sm md:text-base tracking-[0.2em] uppercase font-semibold text-[#8B4513]">February 2027 · 8.30 AM Onwards</p>
       </div>
 
       <div className="relative z-[100] text-center mb-8 md:mb-12 flex flex-col">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const WEDDING_DATE = new Date("2027-02-18T10:00:00+05:30").getTime();
+const WEDDING_DATE = new Date("2027-02-18T08:30:00+05:30").getTime();
 
 function diff(now: number) {
   const total = Math.max(0, WEDDING_DATE - now);

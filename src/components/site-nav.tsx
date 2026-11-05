@@ -6,7 +6,7 @@ import logoImage from "@/assets/logos/ps_spice.png";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/story", label: "Our Story" },
+  { to: "/story", label: "No Backstory, Just Vibes" },
   { to: "/itinerary", label: "Itinerary" },
   { to: "/details", label: "Details" },
   { to: "/rsvp", label: "RSVP" },
