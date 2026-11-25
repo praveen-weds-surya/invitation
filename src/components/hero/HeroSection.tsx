@@ -17,14 +17,14 @@ export function HeroSection() {
 
       {/* Let's Get Started Call to Action Button */}
       <motion.div 
-        className="mt-8 sm:mt-12 w-full flex justify-center z-30"
+        className="mt-6 sm:mt-8 w-full flex justify-center z-30"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.8, duration: 0.8 }}
       >
         <Link 
           to="/story" 
-          className="group inline-flex items-center justify-center rounded-full bg-[#E4CBA9] px-10 sm:px-12 py-4 text-center font-serif text-lg sm:text-xl font-medium text-[#2F3E1C] shadow-xl shadow-black/25 border border-white/40 transition-all duration-300 hover:bg-[#F5F1E6] hover:scale-105 hover:shadow-2xl active:scale-95 cursor-pointer"
+          className="group inline-flex items-center justify-center rounded-full bg-[#E4CBA9] px-7 sm:px-8 py-2.5 sm:py-3 text-center font-serif text-sm sm:text-base font-medium text-[#2F3E1C] shadow-lg shadow-black/20 border border-white/40 transition-all duration-300 hover:bg-[#F5F1E6] hover:scale-105 hover:shadow-xl active:scale-95 cursor-pointer"
         >
           Let's Get Started
         </Link>

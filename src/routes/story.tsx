@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowDown } from "lucide-react";
 import storyAsset from "@/assets/ps-story.png.asset.json";
 import storyImage from "@/assets/images/gallery/ps.jpg";
 import rangoliCorner from "@/assets/logos/rangoli.png";
@@ -74,20 +75,33 @@ function Story() {
         </div>
       </section>
 
-      {/* You are Invited */}
-      <section className="bg-[#AF5031] py-16 text-center flex justify-center pb-24">
+      {/* You are Invited Call to Action */}
+      <section className="bg-[#AF5031] pt-8 pb-24 text-center flex flex-col items-center justify-center">
         <Link 
           to="/itinerary" 
-          className="group relative block transition-transform hover:scale-105 active:scale-95"
+          className="group flex flex-col items-center cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95"
         >
-          <img 
-            src={inviteButton} 
-            alt="You are invited" 
-            className="h-24 w-auto object-contain"
-          />
-          <span className="absolute inset-0 flex items-center justify-center text-[#E4CBA9] font-serif text-2xl pointer-events-none">
-            You are invited!
-          </span>
+          {/* Interactive Arrow pointing down to the button */}
+          <div className="flex flex-col items-center mb-3 text-[#E4CBA9] transition-transform duration-300 group-hover:translate-y-1.5 select-none">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-semibold opacity-85 group-hover:opacity-100 transition-opacity">
+              Tap to view Itinerary
+            </span>
+            <div className="mt-1.5 animate-bounce">
+              <ArrowDown size={22} className="stroke-[2.5]" />
+            </div>
+          </div>
+
+          {/* Button Badge */}
+          <div className="relative inline-block drop-shadow-xl transition-all duration-300 group-hover:drop-shadow-2xl">
+            <img 
+              src={inviteButton} 
+              alt="You are invited" 
+              className="h-20 sm:h-24 w-auto object-contain transition-transform duration-300 group-hover:brightness-105"
+            />
+            <span className="absolute inset-0 flex items-center justify-center text-[#E4CBA9] font-serif text-xl sm:text-2xl font-medium pointer-events-none px-6">
+              You are invited!
+            </span>
+          </div>
         </Link>
       </section>
     </>
