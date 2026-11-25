@@ -49,9 +49,9 @@ function GlamUpPage() {
 
           <div className="relative z-[100] flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6">
             <Swatch color="#F1E5C1" name="Metallic Champagne" />
-            <Swatch color="#C0C0C0" name="Silver Grey" />
-            <Swatch color="#006400" name="Emerald Green" />
-            <Swatch color="#008080" name="Deep Teal" />
+            <Swatch color="#AF5031" name="Terracotta" />
+            <Swatch color="#556B2F" name="Olive" />
+            <Swatch color="#421A3B" name="Black Currant" />
             <Swatch color="#BFA047" name="Antique Gold" />
           </div>
         </div>
