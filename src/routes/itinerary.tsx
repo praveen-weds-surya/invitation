@@ -61,19 +61,19 @@ function Itinerary() {
         <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 flex-wrap">
           <Link 
             to="/rsvp" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#AF5031] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#8f3f24] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#AF5031]"
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#AF5031]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#AF5031] hover:scale-105 active:scale-95 shadow-md border-2 border-[#AF5031]/70"
           >
             RSVP
           </Link>
           <Link 
             to="/glam-up" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#092F33] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#041618] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#092F33]"
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#092F33]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-md border-2 border-[#092F33]/70"
           >
             What to Wear
           </Link>
           <Link 
             to="/details" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#2F3E1C] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#1f2a13] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#2F3E1C]"
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#2F3E1C]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#2F3E1C] hover:scale-105 active:scale-95 shadow-md border-2 border-[#2F3E1C]/70"
           >
             Details
           </Link>
