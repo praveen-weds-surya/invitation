@@ -56,24 +56,24 @@ function Itinerary() {
         </div>
       </section>
 
-      {/* Action Buttons: RSVP, What to Wear & Details */}
+      {/* Action Buttons: RSVP, What to Wear & Travel & Explore */}
       <section className="bg-beige pb-24">
-        <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 flex-wrap">
+        <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap">
           <Link 
             to="/rsvp" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#AF5031]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#AF5031] hover:scale-105 active:scale-95 shadow-md border-2 border-[#AF5031]/70"
+            className="w-full sm:w-auto min-w-[180px] inline-flex items-center justify-center rounded-full bg-[#AF5031] px-8 sm:px-9 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-serif font-medium uppercase tracking-[0.12em] text-[#FFFDF9] shadow-lg shadow-[#AF5031]/25 border border-[#E4CBA9]/50 transition-all duration-300 hover:bg-[#923E22] hover:scale-105 hover:shadow-xl hover:shadow-[#AF5031]/35 active:scale-95 cursor-pointer"
           >
             RSVP
           </Link>
           <Link 
             to="/glam-up" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#092F33]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-md border-2 border-[#092F33]/70"
+            className="w-full sm:w-auto min-w-[180px] inline-flex items-center justify-center rounded-full bg-[#092F33] px-8 sm:px-9 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-serif font-medium uppercase tracking-[0.12em] text-[#FFFDF9] shadow-lg shadow-[#092F33]/25 border border-[#E4CBA9]/50 transition-all duration-300 hover:bg-[#062023] hover:scale-105 hover:shadow-xl hover:shadow-[#092F33]/35 active:scale-95 cursor-pointer"
           >
             What to Wear
           </Link>
           <Link 
             to="/details" 
-            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#2F3E1C]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#2F3E1C] hover:scale-105 active:scale-95 shadow-md border-2 border-[#2F3E1C]/70"
+            className="w-full sm:w-auto min-w-[180px] inline-flex items-center justify-center rounded-full bg-[#2F3E1C] px-8 sm:px-9 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-serif font-medium uppercase tracking-[0.12em] text-[#FFFDF9] shadow-lg shadow-[#2F3E1C]/25 border border-[#E4CBA9]/50 transition-all duration-300 hover:bg-[#222E14] hover:scale-105 hover:shadow-xl hover:shadow-[#2F3E1C]/35 active:scale-95 cursor-pointer"
           >
             Travel &amp; Explore
           </Link>
