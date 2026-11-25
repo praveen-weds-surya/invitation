@@ -15,18 +15,18 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Let's Get Started Call to Action */}
+      {/* Let's Get Started Call to Action Button */}
       <motion.div 
         className="mt-8 sm:mt-12 w-full flex justify-center z-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8, duration: 0.8 }}
       >
-        <Link to="/story" className="group flex flex-col items-center text-[#E4CBA9] select-none">
-          <span className="font-serif text-xl sm:text-2xl transition-all tracking-normal group-hover:tracking-[0.2em] duration-300">
-            Let's Get Started
-          </span>
-          <span className="mt-3 sm:mt-4 text-lg sm:text-xl animate-bounce">↓</span>
+        <Link 
+          to="/story" 
+          className="group inline-flex items-center justify-center rounded-full bg-[#E4CBA9] px-10 sm:px-12 py-4 text-center font-serif text-lg sm:text-xl font-medium text-[#2F3E1C] shadow-xl shadow-black/25 border border-white/40 transition-all duration-300 hover:bg-[#F5F1E6] hover:scale-105 hover:shadow-2xl active:scale-95 cursor-pointer"
+        >
+          Let's Get Started
         </Link>
       </motion.div>
 

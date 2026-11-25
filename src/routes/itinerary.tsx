@@ -56,14 +56,20 @@ function Itinerary() {
         </div>
       </section>
 
-      {/* RSVP Section */}
-      <section className="bg-beige pb-24 flex justify-center">
-        <div className="container-w flex justify-center">
+      {/* Action Buttons: RSVP & Dress Code */}
+      <section className="bg-beige pb-24">
+        <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <Link 
             to="/rsvp" 
-            className="inline-block rounded-full bg-accent px-12 py-5 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl border border-white/20"
+            className="w-full sm:w-auto inline-block rounded-full bg-accent px-12 py-5 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl border border-white/20"
           >
             RSVP
+          </Link>
+          <Link 
+            to="/glam-up" 
+            className="w-full sm:w-auto inline-block rounded-full bg-[#092F33] px-10 py-5 text-center text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#041618] hover:scale-105 active:scale-95 shadow-xl border border-white/10"
+          >
+            What to Wear
           </Link>
         </div>
       </section>

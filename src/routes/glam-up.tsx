@@ -108,9 +108,6 @@ function Swatch({ color, name }: { color: string; name: string }) {
       <span className="text-[10px] md:text-xs font-bold tracking-[0.08em] uppercase text-center max-w-[95px] text-[#092F33] leading-tight">
         {name}
       </span>
-      <span className="text-[9px] md:text-[10px] font-mono tracking-wider text-[#092F33]/70 font-semibold">
-        {color.toUpperCase()}
-      </span>
     </div>
   );
 }
