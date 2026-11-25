@@ -22,7 +22,7 @@ function Story() {
     <>
       {/* Header Section */}
       <section className="bg-[#E4CBA9] py-14 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-[#AF5031]">Praveen &amp; Surya</p>
+        <p className="text-xs uppercase tracking-[0.12em] font-semibold text-[#AF5031]">Praveen &amp; Surya</p>
         <h1 className="mt-4 text-4xl sm:text-5xl text-[#092F33] font-serif">No Backstory, Just Vibes</h1>
       </section>
 

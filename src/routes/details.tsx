@@ -31,7 +31,7 @@ function Details() {
   return (
     <>
       <section className="bg-beige py-14 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-accent">Everything you need</p>
+        <p className="text-xs uppercase tracking-[0.12em] font-semibold text-accent">Everything you need</p>
         <h1 className="mt-4 text-4xl sm:text-5xl text-primary">Travel &amp; Details</h1>
         
       </section>

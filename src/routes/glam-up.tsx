@@ -22,13 +22,13 @@ function GlamUpPage() {
       {/* PAGE HEADER                                                    */}
       {/* ============================================================== */}
       <div className="relative w-full pt-16 md:pt-20 pb-8 flex flex-col items-center justify-center z-40 px-4">
-        <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#E4CBA9] font-semibold mb-3">
+        <p className="text-xs md:text-sm tracking-[0.12em] uppercase text-[#E4CBA9] font-semibold mb-3">
           Wedding Guest
         </p>
         <h1 className="relative z-[100] text-4xl sm:text-5xl md:text-7xl text-[#F5F1E6] text-center drop-shadow-lg font-serif">
           Color Palette Guide
         </h1>
-        <p className="relative z-[100] text-center text-xs md:text-sm tracking-[0.2em] uppercase mt-4 text-[#E4CBA9]/85 font-medium max-w-md">
+        <p className="relative z-[100] text-center text-xs md:text-sm tracking-[0.08em] uppercase mt-4 text-[#E4CBA9]/85 font-medium max-w-md">
           Curated tones to complement our celebration
         </p>
       </div>

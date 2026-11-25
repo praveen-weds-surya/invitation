@@ -18,24 +18,26 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-cream/90 backdrop-blur">
       <div className="container-w flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-serif text-lg text-primary">
+        <Link to="/" className="flex items-center gap-3 font-serif text-lg text-primary group">
           <img 
             src={logoImage} 
             alt="Praveen & Surya Logo" 
-            className="h-9 w-9 object-contain" 
+            className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105" 
           />
-          <span className="hidden sm:inline text-sm uppercase tracking-[0.28em]">Praveen &amp; Surya</span>
+          <span className="inline font-serif text-base sm:text-lg font-medium tracking-normal text-primary">
+            Praveen &amp; Surya
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-xs uppercase tracking-[0.24em] transition-colors hover:text-accent ${
+              className={`text-xs uppercase tracking-[0.08em] font-medium transition-colors hover:text-accent ${
                 l.to === "/rsvp" 
-                  ? "btn-primary !py-2 !px-5 text-[0.7rem]" 
+                  ? "btn-primary !py-2 !px-5 text-[0.7rem] !tracking-[0.08em]" 
                   : "text-primary/80"
               }`}
               activeProps={{ className: l.to === "/rsvp" ? "" : "text-accent" }}
@@ -65,7 +67,7 @@ export function SiteNav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="text-sm uppercase tracking-[0.24em] text-primary/80 py-2"
+                className="text-sm uppercase tracking-[0.08em] font-medium text-primary/80 py-2"
                 activeProps={{ className: "text-accent" }}
                 activeOptions={{ exact: l.to === "/" }}
               >

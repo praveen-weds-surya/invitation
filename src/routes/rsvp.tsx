@@ -59,7 +59,7 @@ function RsvpPage() {
   return (
     <>
       <section className="bg-beige py-14 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-accent">Kindly respond</p>
+        <p className="text-xs uppercase tracking-[0.12em] font-semibold text-accent">Kindly respond</p>
         <h1 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">RSVP</h1>
         <div className="divider-motif mt-6" />
       </section>
