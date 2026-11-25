@@ -8,7 +8,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/story", label: "No Backstory, Just Vibes" },
   { to: "/itinerary", label: "Itinerary" },
-  { to: "/details", label: "Details" },
+  { to: "/details", label: "Travel & Explore" },
   { to: "/rsvp", label: "RSVP" },
 ];
 

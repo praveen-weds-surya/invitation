@@ -75,7 +75,7 @@ function Itinerary() {
             to="/details" 
             className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#2F3E1C]/50 backdrop-blur-md px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-white transition-all duration-300 hover:bg-[#2F3E1C] hover:scale-105 active:scale-95 shadow-md border-2 border-[#2F3E1C]/70"
           >
-            Details
+            Travel &amp; Explore
           </Link>
         </div>
       </section>

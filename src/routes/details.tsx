@@ -14,9 +14,9 @@ import {
 export const Route = createFileRoute("/details")({
   head: () => ({
     meta: [
-      { title: "Travel & Details · Praveen & Surya" },
+      { title: "Travel & Explore · Praveen & Surya" },
       { name: "description", content: "Venue, travel logistics, and places to explore around Palakkad, Alleppey, Kochi, Athirappilly, and Valparai." },
-      { property: "og:title", content: "Travel & Details · Praveen & Surya" },
+      { property: "og:title", content: "Travel & Explore · Praveen & Surya" },
       { property: "og:description", content: "Getting there and extended vacation ideas around Kerala." },
     ],
   }),
@@ -92,8 +92,8 @@ function Details() {
     <div className="min-h-screen bg-background pb-24">
       {/* Page Header */}
       <section className="bg-beige py-14 text-center border-b border-border/40">
-        <p className="text-xs uppercase tracking-[0.12em] font-semibold text-accent">Everything you need</p>
-        <h1 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">Travel &amp; Details</h1>
+        <p className="text-xs uppercase tracking-[0.12em] font-semibold text-accent">Getting There &amp; Beyond</p>
+        <h1 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">Travel &amp; Explore</h1>
         <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto px-4">
           Key logistics for reaching the celebration, plus hand-picked destinations to make an unforgettable Kerala vacation out of your trip.
         </p>
