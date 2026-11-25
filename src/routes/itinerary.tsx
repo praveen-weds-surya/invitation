@@ -56,20 +56,26 @@ function Itinerary() {
         </div>
       </section>
 
-      {/* Action Buttons: RSVP & Dress Code */}
+      {/* Action Buttons: RSVP, What to Wear & Details */}
       <section className="bg-beige pb-24">
-        <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <div className="container-w flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 flex-wrap">
           <Link 
             to="/rsvp" 
-            className="w-full sm:w-auto inline-block rounded-full bg-accent px-12 py-5 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl border border-white/20"
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#AF5031] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#8f3f24] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#AF5031]"
           >
             RSVP
           </Link>
           <Link 
             to="/glam-up" 
-            className="w-full sm:w-auto inline-block rounded-full bg-[#092F33] px-10 py-5 text-center text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#041618] hover:scale-105 active:scale-95 shadow-xl border border-white/10"
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#092F33] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#041618] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#092F33]"
           >
             What to Wear
+          </Link>
+          <Link 
+            to="/details" 
+            className="w-full sm:w-auto min-w-[170px] inline-block rounded-full bg-[#2F3E1C] px-8 sm:px-10 py-4 sm:py-4.5 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#1f2a13] hover:scale-105 active:scale-95 shadow-xl shadow-black/20 border-2 border-[#2F3E1C]"
+          >
+            Details
           </Link>
         </div>
       </section>

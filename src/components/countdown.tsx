@@ -47,7 +47,7 @@ export function Countdown({ variant = "light" }: { variant?: "light" | "dark" })
               "rounded-lg border px-2 py-4 sm:py-6 text-center " +
               (isDark
                 ? "border-cream/25 bg-white/5 text-cream"
-                : "border-accent/25 bg-cream/60 text-primary")
+                : "border-accent/30 bg-cream text-primary shadow-sm")
             }
           >
             <div className="font-serif text-3xl sm:text-5xl tabular-nums">

@@ -195,7 +195,7 @@ function InviteCard({ bride, groom }: InviteCardProps) {
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">PALAKKAD, KERALA 678001</p>
       </div>
 
-      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#AF5031] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-lg shadow-[#AF5031]/30">
+      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#AF5031] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#E4CBA9] transition-all duration-300 hover:bg-[#092F33] hover:scale-105 active:scale-95 shadow-xl shadow-black/25 border-2 border-[#AF5031]">
         Let's Glam Up
       </a>
     </div>
@@ -243,7 +243,7 @@ function WeddingCard({ bride, groom }: InviteCardProps) {
         <p className="mb-0 text-[10px] md:text-xs tracking-[0.15em] text-[#092F33]/80 uppercase font-medium">PALAKKAD, KERALA 678001</p>
       </div>
 
-      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#8B4513] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#980204] hover:scale-105 active:scale-95 shadow-lg shadow-[#8B4513]/40">
+      <a href="/glam-up" className="relative z-[100] mt-4 inline-block rounded-full bg-[#8B4513] px-10 py-4 text-center text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#F5F1E6] transition-all duration-300 hover:bg-[#980204] hover:scale-105 active:scale-95 shadow-xl shadow-black/25 border-2 border-[#8B4513]">
         Let's Glam Up
       </a>
     </div>
